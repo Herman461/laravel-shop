@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .preloader {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            transition: all 0.3s ease 0s;
+        }
+
+        .preloader.hidden {
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css?_v=20230301025217">
+    <title>Оплата и доставка</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="preloader"></div>
+        <header class="header">
+            <div class="header__top top-header">
+                <div class="top-header__container container">
+                    <div class="top-header__menu menu">
+                        <div class="menu__body">
+                            <nav class="menu__nav">
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a href="" class="menu__link">О компании</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="" class="menu__link">Оплата и доставка</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="" class="menu__link">Сервис и монтаж</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="" class="menu__link">Гарантия и возврат</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="" class="menu__link">Отзывы</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="" class="menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div data-da=".menu__body,991.98,first" class="top-header__info">
+                        <a href="tel:70720722222">+7 072 072 2222</a> (с 09:00 до 18:00)
+                    </div>
+                </div>
+            </div>
+            <div class="header__main main-header">
+                <div class="main-header__container container">
+                    <div class="main-header__block">
+                        <a href="" class="main-header__logo">
+                            <picture>
+                                <source srcset="assets/images/logo.svg" media="(min-width: 991.98px)">
+                                <source srcset="assets/images/logo-white.svg" media="(max-width: 991.98px)">
+                                <img src="assets/images/logo.svg" alt="">
+                            </picture>
+                        </a>
+                        <div class="main-header__burger burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div data-da=".page,767.98,first" class="main-header__search search-header">
+                        <form action="#" class="search-header__form">
+                            <div class="search-header__input">
+                                <input class="input" placeholder="Найти интересующий товар" type="text">
+                            </div>
+                            <button class="search-header__button stroke" type="button">
+                                <svg>
+                                    <use xlink:href="assets/images/icons/icons.svg#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <ul data-da=".menu__body,767.98,last" class="main-header__actions actions-header">
+                        <li class="actions-header__item">
+                            <a href="" class="actions-header__link">
+                                <div class="actions-header__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                    </svg>
+                                </div>
+                                <span>Сравнить</span>
+                            </a>
+                        </li>
+                        <li class="actions-header__item">
+                            <a href="" class="actions-header__link">
+                                <div class="actions-header__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                    </svg>
+                                </div>
+                                <span>Избранное</span>
+                            </a>
+                        </li>
+                        <li class="actions-header__item">
+                            <a href="" class="actions-header__link">
+                                <div class="actions-header__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icons/icons.svg#cart"></use>
+                                    </svg>
+                                </div>
+                                <span>Корзина</span>
+                            </a>
+                        </li>
+                        <li class="actions-header__item">
+                            <a href="" class="actions-header__link">
+                                <div class="actions-header__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icons/icons.svg#user"></use>
+                                    </svg>
+                                </div>
+                                <span>Войти</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="" class="main-header__cart">
+                        <svg>
+                            <use xlink:href="assets/images/icons/icons.svg#cart"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="header__categories categories-header">
+                <div class="categories-header__container container">
+                    <ul class="categories-header__list">
+                        <li class="categories-header__item">
+                            <a href="" class="categories-header__link">Отопление</a>
+                        </li>
+                        <li class="categories-header__item">
+                            <a href="" class="categories-header__link">Водоснабжение</a>
+                        </li>
+                        <li class="categories-header__item">
+                            <a href="" class="categories-header__link">Трубы и фитинги</a>
+                        </li>
+                        <li class="categories-header__item">
+                            <a href="" class="categories-header__link">Кондиционеры</a>
+                        </li>
+                        <li class="categories-header__item">
+                            <a href="" class="categories-header__link">Сантехника</a>
+                        </li>
+                        <li class="categories-header__item">
+                            <a href="" class="categories-header__link">Бытовая техника для дома и кухни</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+
+
+        <main class="page">
+            <div class="page__intro-block intro-block">
+                <div class="intro-block__container container">
+                    <div class="intro-block__banners banners-intro-block">
+                        <div class="banners-intro-block__body swiper">
+                            <div class="banners-intro-block__slide">
+                                <div class="banners-intro-block__image">
+                                    <img src="assets/images/main-banner.jpg" alt="">
+                                </div>
+                                <div class="banners-intro-block__content">
+                                    <div class="banners-intro-block__title">Есть люди уютные, как дом.
+                                        <br>
+                                        Обнимаешь их и понимаешь: я дома.
+                                    </div>
+                                    <div class="banners-intro-block__text">
+                                        <p>Специальисты нашей компании помогут Вам не ошибиться
+                                            <br> в выборе.
+                                        </p>
+                                        <p>Обеспечим Вас товарами наилучшего качества
+                                            <br>
+                                            по доступной цене.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banners-intro-block__slide">
+                                <div class="banners-intro-block__image">
+                                    <img src="assets/images/main-banner.jpg" alt="">
+                                </div>
+                                <div class="banners-intro-block__content">
+                                    <div class="banners-intro-block__title">Есть люди уютные, как дом.
+                                        <br>
+                                        Обнимаешь их и понимаешь: я дома.
+                                    </div>
+                                    <div class="banners-intro-block__text">
+                                        <p>Специальисты нашей компании помогут Вам не ошибиться
+                                            <br> в выборе.
+                                        </p>
+                                        <p>Обеспечим Вас товарами наилучшего качества
+                                            <br>
+                                            по доступной цене.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banners-intro-block__slide">
+                                <div class="banners-intro-block__image">
+                                    <img src="assets/images/main-banner.jpg" alt="">
+                                </div>
+                                <div class="banners-intro-block__content">
+                                    <div class="banners-intro-block__title">Есть люди уютные, как дом.
+                                        <br>
+                                        Обнимаешь их и понимаешь: я дома.
+                                    </div>
+                                    <div class="banners-intro-block__text">
+                                        <p>Специальисты нашей компании помогут Вам не ошибиться
+                                            <br> в выборе.
+                                        </p>
+                                        <p>Обеспечим Вас товарами наилучшего качества
+                                            <br>
+                                            по доступной цене.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banners-intro-block__dots dots"></div>
+                    </div>
+                    <div class="intro-block__products products-intro-block">
+
+                        <div class="products-intro-block__body swiper">
+                            <div class="products-intro-block__slide">
+                                <div class="products-intro-block__timer timer-intro-block">
+                                    <div class="timer-intro-block__label">До конца акции</div>
+                                    <div class="timer-intro-block__item">
+                                        <span>10</span>
+                                        <span>15</span>
+                                        <span>32</span>
+                                        <span>27</span>
+                                    </div>
+                                </div>
+                                <div class="products-intro-block__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="assets/images/products/02.png" alt="">
+                                    </a>
+                                    <a href="" class="item-product__title">Кондиционер Daichi Peak DA35AVQS1-S</a>
+                                    <div class="item-product__bottom">
+                                        <div class="item-product__price price">
+                                            <div class="price__item price__item_old">57 900р.</div>
+                                            <div class="price__item price__item_red">40 600р.</div>
+                                        </div>
+                                        <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-intro-block__slide">
+                                <div class="products-intro-block__timer timer-intro-block">
+                                    <div class="timer-intro-block__label">До конца акции</div>
+                                    <div class="timer-intro-block__item">
+                                        <span>10</span>
+                                        <span>15</span>
+                                        <span>32</span>
+                                        <span>27</span>
+                                    </div>
+                                </div>
+                                <div class="products-intro-block__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="assets/images/products/02.png" alt="">
+                                    </a>
+                                    <a href="" class="item-product__title">Кондиционер Daichi Peak DA35AVQS1-S</a>
+                                    <div class="item-product__bottom">
+                                        <div class="item-product__price price">
+                                            <div class="price__item price__item_old">57 900р.</div>
+                                            <div class="price__item price__item_red">40 600р.</div>
+                                        </div>
+                                        <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-intro-block__slide">
+                                <div class="products-intro-block__timer timer-intro-block">
+                                    <div class="timer-intro-block__label">До конца акции</div>
+                                    <div class="timer-intro-block__item">
+                                        <span>10</span>
+                                        <span>15</span>
+                                        <span>32</span>
+                                        <span>27</span>
+                                    </div>
+                                </div>
+                                <div class="products-intro-block__item item-product">
+                                    <a href="" class="item-product__image">
+                                        <img src="assets/images/products/02.png" alt="">
+                                    </a>
+                                    <a href="" class="item-product__title">Кондиционер Daichi Peak DA35AVQS1-S</a>
+                                    <div class="item-product__bottom">
+                                        <div class="item-product__price price">
+                                            <div class="price__item price__item_old">57 900р.</div>
+                                            <div class="price__item price__item_red">40 600р.</div>
+                                        </div>
+                                        <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-intro-block__dots dots"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__container container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li>
+                            <a href="" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li>
+                            <span class="breadcrumbs__item">Оплата и доставка</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="delivery section">
+                    <div class="delivery__content content">
+                        <h1>Оплата и доставка</h1>
+                        <p>Все товары в интернет-магазине KLONDAYK.LG.UA продаются с доставкой. Сделать заказ можно несколькими способами: по телефону +7 959 072 22 22 или
+                            нажать кнопку “Купить” и заполнить форму заказа. Если нет возможности осуществить звонок, мы можем сами позвонить сами - закажите обратный звонок.</p>
+                        <p>
+                            После принятия от вас заказ с вами обязательно свяжется наш менеджер:
+                        </p>
+                        <ul>
+                            <li>подтвердит принятие заказа;</li>
+                            <li>подтвердит цену и наличие товара на складе;</li>
+                            <li>согласует время и место получения товара.</li>
+                        </ul>
+                        <h4>Условия оплаты</h4>
+                        <p>В соответствии с действующим законодательством оплата товаров и услуг на террритории Луганской народной Республики производится в российских
+                            рублях.</p>
+                        <h5>Наличный расчет</h5>
+                        <i>Для физических лиц:</i>
+                        <ul>
+                            <li>при доставке товара по Луганску и области;</li>
+                            <li>при бронировании или заказе оборудования в офисе компании.</li>
+                        </ul>
+                        <i>Для юридических лиц:</i>
+                        <ul>
+                            <li>при оплате по выставленному счету.</li>
+                        </ul>
+                        <p>После оплаты выдается полный комплект документов: тованрная накладная, сертификат и гарантийный талон.</p>
+                        <i>Безналичный расчет:</i>
+                        <ul>
+                            <li>физическим лицам при указании ФИО покупателя;</li>
+                            <li>юридическим лицам после получения реквизитов организации.</li>
+                        </ul>
+                        <p>Для подтверждения оплаты товара покупателю следует отправить уведомление об оплате счета на электронную почту интернет-магазина.
+                            При необходимости с физическими и юридическими лицами заключается договор поставки оборудования.</p>
+                        <h4>Условия доставки</h4>
+                        <p>
+                            <strong>Доставка курьером на дом:</strong>
+                        </p>
+                        <ul>
+                            <li>доставка товара по городу Луганску осуществляется в рабочие дни с 9:00 до 21:00 (выходные по договоренности). Согласовать удобное вермя доставки Вы можете с нашими менеджерами по телефонам, указанным на нашем сайте;</li>
+                            <li>доставка осуществляется до подъезда или места, куда может бесприпятственно подъехать автомобиль и можно произвести выгрузку товара;</li>
+                            <li>доставка в день обращения (срочная доставка) возможна при наличии свободных машин или курьеров;</li>
+                            <li>водитель не выполняет функция грузчиков, не перемещает доставленный товар до места выгрузки;</li>
+                            <li>доставка по Луганской области составляет 50 руб/км и оплачивается по фактически пройденному расстоянию автомобиля. Узнать точное расстояние
+                                <br>мы рекомендуем с помощью сервиса Яндекс карты;
+                            </li>
+                            <li>при доставке заказа выгрузка товара осуществляется силами за счет покупателя;</li>
+                            <li>если доставка осуществляется на закрытую для въезжа территорию, для получения товара встретьте курьера у ворот или заранее оформите ему пропуск;</li>
+                            <li>водитель всегда за 1 час до прибытия на адрес предупреждает об этом покупателя;</li>
+                            <li>при получении товара проверьте коробку на отсутствие повреждений, следов вскрытия, помятостей, затем вскройте упаковку, осмотрите внимательно товар, проверьте комплектацию;</li>
+                            <li>самовывоз осуществляется после подтверждения магазином перемещения товара в пункт выдачи;</li>
+                            <li>экспедитор не консультирует по вопросоам технических параметров и цункциональных особенностей товара, их совместимости, стоимости и т.п. Эту информацию можно получить, позвонив к нам в офис по контакнтым телефонам;</li>
+                            <li>наши машины развозят заказы по заранее распланированным маршрутам по графику, предусматривающему высокую точность. Поэтому просим Вас отнестись с пониманием к тому, что разгрузка, проверка и оплата товара должны быть произведены в течении 10-1минут.</li>
+                        </ul>
+                        <p>
+                            <b>Подъем товара на этаж - платный</b>, цены просьба уточнять у менеджеров по телефону.
+                        </p>
+                        <h4>Прием товаров при доставке</h4>
+                        <p>При приеме товара обязательно удостоверьтесь в отсутствии фнешних деффектов и его полной комплектации. претензии насчет внешнего вида доставленного
+                            товара можно предъявить только лишь до передачи вам товара курьером. При замеченных внешних повреждений и комплектации товара, вы можете отказа-
+                            ться от товара. Подпись в акте получения товара или же отсутствие замечаний при доставка считается подтверждением того факта, что товар доставлен без
+                            внешних повреждений и полной комплектации, в дальнейшем бесполезно предъявлять какие-то претензии на данную тему.</p>
+                        <p>Перед началом использования товара, тщательно ознакомьтесь с пособием по эксплуатации и убедитесь, что товар отвечает вашим представлениям про его
+                            функциональные возможности. В случае, если товар надлежащего качества не подошел вам по каким-либо причинам, вы можете отказаться от него в любое
+                            время до его передачи, или после передачи, на протяжении 14 дней, при условиях, если товар отвечает правилам обмена и возврата товаров надлежащего
+                            качества.</p>
+                        <p>При замеченных скрытых дефектах в товаре сразу же сообщиет про это работникам интернет-магазина. Обмен товара или возврат денег всовершается
+                            только после экспертизы сервисного центра (подробнее смотреть <a href="">правила обмена и возврата товаров</a>).</p>
+                        <p style="font-size: 18px;color: #4C85D6;font-weight: 500;">Желаем Вам удачных покупок!</p>
+                        <p>
+                            <i>С уважением, коллектив KLONDAYK.LG.UA</i>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="page__products-slider products-slider">
+                    <div class="products-slider__top top-slider">
+                        <h2 class="top-slider__title title">Вы смотрели</h2>
+                        <a href="" class="top-slider__more">
+                            Показать все
+                            <svg>
+                                <use xlink:href="assets/images/icons/icons.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="products-slider__wrapper">
+                        <div class="products-slider__body swiper">
+                            <div class="products-slider__slide">
+                                <article class="item-product">
+
+                                    <div class="item-product__actions">
+                                        <div class="item-product__favorite">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item-product__compare">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a href="" class="item-product__image">
+                                        <img loading="lazy" src="assets/images/products/01.png" alt="">
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label item-product__label_red">Акция</div>
+                                            <div class="item-product__label">Хит</div>
+                                        </div>
+                                        <div class="item-product__pin">Артикул: 0794</div>
+                                        <div class="item-product__reviews reviews-item-product">
+                                            <div class="reviews-item-product__stars">
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Инфракрасный обогреватель РИО 04, 400 Вт, 4 м2</a>
+                                        <div class="item-product__description">Предназначен для создания комфорт ных условий в жилых
+                                            и промышленных помещения.</div>
+                                        <div class="item-product__bottom">
+                                            <div class="item-product__price">1 666р.</div>
+                                            <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+                            <div class="products-slider__slide">
+                                <article class="item-product">
+
+                                    <div class="item-product__actions">
+                                        <div class="item-product__favorite">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item-product__compare">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a href="" class="item-product__image">
+                                        <img loading="lazy" src="assets/images/products/01.png" alt="">
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label item-product__label_red">Акция</div>
+                                            <div class="item-product__label">Хит</div>
+                                        </div>
+                                        <div class="item-product__pin">Артикул: 0794</div>
+                                        <div class="item-product__reviews reviews-item-product">
+                                            <div class="reviews-item-product__stars">
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Инфракрасный обогреватель РИО 04, 400 Вт, 4 м2</a>
+                                        <div class="item-product__description">Предназначен для создания комфорт ных условий в жилых
+                                            и промышленных помещения.</div>
+                                        <div class="item-product__bottom">
+                                            <div class="item-product__price">1 666р.</div>
+                                            <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+                            <div class="products-slider__slide">
+                                <article class="item-product">
+
+                                    <div class="item-product__actions">
+                                        <div class="item-product__favorite">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item-product__compare">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a href="" class="item-product__image">
+                                        <img loading="lazy" src="assets/images/products/01.png" alt="">
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label item-product__label_red">Акция</div>
+                                            <div class="item-product__label">Хит</div>
+                                        </div>
+                                        <div class="item-product__pin">Артикул: 0794</div>
+                                        <div class="item-product__reviews reviews-item-product">
+                                            <div class="reviews-item-product__stars">
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Инфракрасный обогреватель РИО 04, 400 Вт, 4 м2</a>
+                                        <div class="item-product__description">Предназначен для создания комфорт ных условий в жилых
+                                            и промышленных помещения.</div>
+                                        <div class="item-product__bottom">
+                                            <div class="item-product__price">1 666р.</div>
+                                            <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+                            <div class="products-slider__slide">
+                                <article class="item-product">
+
+                                    <div class="item-product__actions">
+                                        <div class="item-product__favorite">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item-product__compare">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a href="" class="item-product__image">
+                                        <img loading="lazy" src="assets/images/products/01.png" alt="">
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label item-product__label_red">Акция</div>
+                                            <div class="item-product__label">Хит</div>
+                                        </div>
+                                        <div class="item-product__pin">Артикул: 0794</div>
+                                        <div class="item-product__reviews reviews-item-product">
+                                            <div class="reviews-item-product__stars">
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Инфракрасный обогреватель РИО 04, 400 Вт, 4 м2</a>
+                                        <div class="item-product__description">Предназначен для создания комфорт ных условий в жилых
+                                            и промышленных помещения.</div>
+                                        <div class="item-product__bottom">
+                                            <div class="item-product__price">1 666р.</div>
+                                            <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+                            <div class="products-slider__slide">
+                                <article class="item-product">
+
+                                    <div class="item-product__actions">
+                                        <div class="item-product__favorite">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item-product__compare">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a href="" class="item-product__image">
+                                        <img loading="lazy" src="assets/images/products/01.png" alt="">
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label item-product__label_red">Акция</div>
+                                            <div class="item-product__label">Хит</div>
+                                        </div>
+                                        <div class="item-product__pin">Артикул: 0794</div>
+                                        <div class="item-product__reviews reviews-item-product">
+                                            <div class="reviews-item-product__stars">
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Инфракрасный обогреватель РИО 04, 400 Вт, 4 м2</a>
+                                        <div class="item-product__description">Предназначен для создания комфорт ных условий в жилых
+                                            и промышленных помещения.</div>
+                                        <div class="item-product__bottom">
+                                            <div class="item-product__price">1 666р.</div>
+                                            <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+                            <div class="products-slider__slide">
+                                <article class="item-product">
+
+                                    <div class="item-product__actions">
+                                        <div class="item-product__favorite">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="item-product__compare">
+                                            <svg>
+                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <a href="" class="item-product__image">
+                                        <img loading="lazy" src="assets/images/products/01.png" alt="">
+                                    </a>
+                                    <div class="item-product__content">
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label item-product__label_red">Акция</div>
+                                            <div class="item-product__label">Хит</div>
+                                        </div>
+                                        <div class="item-product__pin">Артикул: 0794</div>
+                                        <div class="item-product__reviews reviews-item-product">
+                                            <div class="reviews-item-product__stars">
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                    <svg>
+                                                        <use xlink:href="assets/images/icons/icons.svg#star-unfilled"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                        </div>
+                                        <a href="" class="item-product__title">Инфракрасный обогреватель РИО 04, 400 Вт, 4 м2</a>
+                                        <div class="item-product__description">Предназначен для создания комфорт ных условий в жилых
+                                            и промышленных помещения.</div>
+                                        <div class="item-product__bottom">
+                                            <div class="item-product__price">1 666р.</div>
+                                            <a href="" class="item-product__button button button_stroke">В корзину</a>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="products-slider__actions">
+                            <div class="products-slider__button-prev stroke">
+                                <svg>
+                                    <use xlink:href="assets/images/icons/icons.svg#angle-right"></use>
+                                </svg>
+                            </div>
+                            <div class="products-slider__button-next stroke">
+                                <svg>
+                                    <use xlink:href="assets/images/icons/icons.svg#angle-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+        <div class="footer">
+            <div class="footer__top top-footer">
+                <div class="top-footer__container container">
+                    <div class="top-footer__main main-footer">
+                        <a href="" class="main-footer__logo">
+                            <img src="assets/images/logo-white.svg" alt="">
+                        </a>
+                        <div class="main-footer__copy">(с) 2023 Интернет магазин отопительных
+                            <br>
+                            систем KLONDAYK в Луганске и ЛНР
+                        </div>
+                        <a href="tel:70720722222" class="main-footer__phone">+7 072 072 2222</a>
+                        <div class="main-footer__schedule">Пн-Пт: с 9:00 до 18:00 Сб: с 10:00 до 17:00</div>
+                    </div>
+                    <div class="top-footer__menu menu-footer">
+                        <div class="menu-footer__column">
+                            <div class="menu-footer__title footer-title">Покупателям</div>
+                            <ul class="menu-footer__list">
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">О компании</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Оплата и доставка</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Сервис и монтаж</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Гарантия и возврат</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Отзывы</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="menu-footer__column">
+                            <div class="menu-footer__title footer-title">Полезное</div>
+                            <ul class="menu-footer__list">
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Акции</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Бренды</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Новинки</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Гарантия и возврат</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Отзывы</a>
+                                </li>
+                                <li class="menu-footer__item">
+                                    <a href="" class="menu-footer__link">Хиты продаж</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="top-footer__contacts contacts-footer">
+                        <div class="contacts-footer__title footer-title">Контакты</div>
+                        <div class="contacts-footer__items">
+                            <div class="contacts-footer__item">
+                                <span class="contacts-footer__label">Почта:</span>
+                                <a href="mailto:zakaz@klondayk.lg.ua" class="contacts-footer__value">zakaz@klondayk.lg.ua</a>
+                            </div>
+                            <div class="contacts-footer__item">
+                                <span class="contacts-footer__label">Телефон:</span>
+                                <a href="tel:70720722222" class="contacts-footer__value">+7 (072) 072 2222</a>
+                            </div>
+                        </div>
+                        <div data-da=".top-footer__container,991.98,2" class="contacts-footer__payment">
+                            <div class="contacts-footer__text">Мы принимаем к оплате:</div>
+                            <div class="contacts-footer__cards">
+                                <img src="assets/images/payment.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom bottom-footer">
+                <div class="bottom-footer__container container">
+                    <div class="bottom-footer__copy">(c) 2023 KLONDAYK.ru Все права защищены.</div>
+                    <a href="" class="bottom-footer__politics">Политика конфенденциальности</a>
+                    <a href="" class="bottom-footer__rules">Правила использования сайта</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="assets/js/plugins/swiper-bundle.min.js?_v=20230301025217"></script>
+    <script>
+    window.addEventListener('load', function() {
+        const preloader = document.querySelector('.preloader')
+        preloader.classList.add('hidden')
+    })
+</script>
+    <script src="assets/js/script.js?_v=20230301025217"></script>
+    <script src="assets/js/app.js?_v=20230301025217"></script>
+</body>
+
+</html>
