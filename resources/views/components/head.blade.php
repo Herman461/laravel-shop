@@ -1,3 +1,8 @@
+@props([
+    'title',
+    'css-file'
+])
+
 <!doctype html>
 <html lang="ru">
 
@@ -6,12 +11,16 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/pages/home.css')}}">
-    <title>Главная</title>
+    @isset($cssFile)
+        <link rel="stylesheet" href="{{asset('css/pages/' . $cssFile . '.css')}}">
+    @endisset
+    <title>{{$title}}</title>
 </head>
 
 <body>
 
 <div class="wrapper">
+    <x-header />
 
