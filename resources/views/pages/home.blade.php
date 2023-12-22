@@ -1,13 +1,4 @@
 <x-head title="Главная" />
-
-
-
-
-
-
-
-
-
     <main class="page">
         <div class="page__intro-block intro-block">
             <div class="intro-block__container container">

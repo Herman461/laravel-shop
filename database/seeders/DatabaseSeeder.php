@@ -3,8 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Attribute;
+use App\Models\AttributeOption;
 use App\Models\Banner;
 use App\Models\Product;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,5 +26,15 @@ class DatabaseSeeder extends Seeder
 
         Banner::factory(5)->create();
         Product::factory(50)->create();
+
+        Attribute::factory(20)
+            ->create()
+            ->each(function($attribute) {
+                $randomOptionCount = random_int(1, 5);
+
+                $options = AttributeOption::factory($randomOptionCount)->make();
+
+                $attribute->attributeOptions()->saveMany($options);
+            });
     }
 }
