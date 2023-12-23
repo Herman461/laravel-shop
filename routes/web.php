@@ -29,6 +29,10 @@ Route::controller(CatalogController::class)->group(function() {
         'index'
     )->name('catalog.page');
 
+    Route::post(
+      '/products/filter',
+      'filterProducts'
+    );
 });
 
 

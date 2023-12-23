@@ -1,4 +1,8 @@
-<x-head title="Каталог" css-file="catalog"/>
+<x-head
+    title="Каталог"
+    css-file="catalog"
+    css-plugins="nouislider.min"
+/>
 <main class="page">
     <div class="page__container container">
         <div class="breadcrumbs">
@@ -65,13 +69,13 @@
                                     <div class="price-side-catalog__column">
                                         <div class="price-side-catalog__input">
                                             <label class="price-side-catalog__label" for="min-price">от</label>
-                                            <input value="199" id="min-price" type="number" class="input">
+                                            <input value="{{$minPrice}}" id="min-price" type="number" class="input">
                                         </div>
                                     </div>
                                     <div class="price-side-catalog__column">
                                         <div class="price-side-catalog__input">
                                             <label class="price-side-catalog__label" for="max-price">до</label>
-                                            <input value="1599" id="max-price" type="number" class="input">
+                                            <input value="{{$maxPrice}}" id="max-price" type="number" class="input">
                                         </div>
                                     </div>
                                 </div>
@@ -292,88 +296,87 @@
 
                     </form>
                 </div>
-                <div class="page__products-slider products-slider">
-                    <div class="products-slider__body products-slider__body_catalog swiper">
-                        @foreach($products as $product)
-                            <div class="products-slider__slide">
-                                <article class="item-product">
+                <div class="catalog-items">
+                    @foreach($products as $product)
+                        <div class="catalog-items__element">
+                            <article class="item-product">
 
-                                    <div class="item-product__actions">
-                                        <div class="item-product__favorite">
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="item-product__compare">
-                                            <svg>
-                                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
-                                            </svg>
-                                        </div>
+                                <div class="item-product__actions">
+                                    <div class="item-product__favorite">
+                                        <svg>
+                                            <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                                        </svg>
                                     </div>
-                                    <a href="product/{{$product->slug}}" class="item-product__image">
-                                        <img loading="lazy" src="{{$product->imageUrl}}" alt="">
-                                    </a>
-                                    <div class="item-product__content">
-                                        <div class="item-product__labels">
-                                            <div class="item-product__label item-product__label_red">Акция</div>
-                                            <div class="item-product__label">Хит</div>
-                                        </div>
-                                        <div class="item-product__pin">Артикул: {{$product->sku}}</div>
-                                        <div class="item-product__reviews reviews-item-product">
-                                            <div class="reviews-item-product__stars">
-                                                <div class="reviews-item-product__star">
-                                                    <svg>
-                                                        <use
-                                                            xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
-                                                    </svg>
-                                                </div>
-                                                <div class="reviews-item-product__star">
-                                                    <svg>
-                                                        <use
-                                                            xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
-                                                    </svg>
-                                                </div>
-                                                <div class="reviews-item-product__star">
-                                                    <svg>
-                                                        <use
-                                                            xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
-                                                    </svg>
-                                                </div>
-                                                <div
-                                                    class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
-                                                    <svg>
-                                                        <use
-                                                            xlink:href="{{asset('storage/images/icons/icons.svg#unfilled')}}"></use>
-                                                    </svg>
-                                                </div>
-                                                <div
-                                                    class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
-                                                    <svg>
-                                                        <use
-                                                            xlink:href="{{asset('storage/images/icons/icons.svg#unfilled')}}"></use>
-                                                    </svg>
-                                                </div>
+                                    <div class="item-product__compare">
+                                        <svg>
+                                            <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="product/{{$product->slug}}" class="item-product__image">
+                                    <img loading="lazy" src="{{$product->imageUrl}}" alt="">
+                                </a>
+                                <div class="item-product__content">
+                                    <div class="item-product__labels">
+                                        <div class="item-product__label item-product__label_red">Акция</div>
+                                        <div class="item-product__label">Хит</div>
+                                    </div>
+                                    <div class="item-product__pin">Артикул: {{$product->sku}}</div>
+                                    <div class="item-product__reviews reviews-item-product">
+                                        <div class="reviews-item-product__stars">
+                                            <div class="reviews-item-product__star">
+                                                <svg>
+                                                    <use
+                                                        xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
+                                                </svg>
                                             </div>
-                                            <div class="reviews-item-product__count">159 отзывов</div>
+                                            <div class="reviews-item-product__star">
+                                                <svg>
+                                                    <use
+                                                        xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="reviews-item-product__star">
+                                                <svg>
+                                                    <use
+                                                        xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
+                                                </svg>
+                                            </div>
+                                            <div
+                                                class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                <svg>
+                                                    <use
+                                                        xlink:href="{{asset('storage/images/icons/icons.svg#unfilled')}}"></use>
+                                                </svg>
+                                            </div>
+                                            <div
+                                                class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                                <svg>
+                                                    <use
+                                                        xlink:href="{{asset('storage/images/icons/icons.svg#unfilled')}}"></use>
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <a href="catalog/{{$product->slug}}"
-                                           class="item-product__title">{{$product->title}}</a>
-
-                                        <div class="item-product__bottom">
-                                            <div class="item-product__price">1 666р.</div>
-                                            <a href="catalog/{{$product->slug}}"
-                                               class="item-product__button button button_stroke">В корзину</a>
-                                        </div>
+                                        <div class="reviews-item-product__count">159 отзывов</div>
                                     </div>
+                                    <a href="catalog/{{$product->slug}}"
+                                       class="item-product__title">{{$product->title}}</a>
 
-                                </article>
+                                    <div class="item-product__bottom">
+                                        <div class="item-product__price">1 666р.</div>
+                                        <a href="catalog/{{$product->slug}}"
+                                           class="item-product__button button button_stroke">В корзину</a>
+                                    </div>
+                                </div>
 
-                            </div>
-                        @endforeach
-                    </div>
+                            </article>
+                        </div>
+
+                    @endforeach
                 </div>
             </div>
         </div>
+
         <div class="page__products-slider products-slider">
             <div class="products-slider__top top-slider">
                 <h2 class="top-slider__title title">Вы смотрели</h2>
@@ -935,6 +938,179 @@
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/pages/catalog.js')}}"></script>
 
+<script>
+    if (document.querySelector('.catalog__side')) {
+
+
+        const priceSlider = document.getElementById('price-slider');
+
+        const priceMinPriceInput = document.getElementById('min-price');
+        const priceMaxPriceInput = document.getElementById('max-price');
+        const priceInputs = [priceMinPriceInput, priceMaxPriceInput];
+
+        function buildProductHTML(product) {
+            return `
+
+                <article class="item-product">
+                    <div class="item-product__actions">
+                        <div class="item-product__favorite">
+                            <svg>
+                                <use xlink:href="assets/images/icons/icons.svg#favorite"></use>
+                            </svg>
+                        </div>
+                        <div class="item-product__compare">
+                            <svg>
+                                <use xlink:href="assets/images/icons/icons.svg#compare"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <a href="product/${product.slug}" class="item-product__image">
+                        <img loading="lazy" src="${product.imageUrl}" alt="">
+                    </a>
+                    <div class="item-product__content">
+                        <div class="item-product__labels">
+                            <div class="item-product__label item-product__label_red">Акция</div>
+                            <div class="item-product__label">Хит</div>
+                        </div>
+                        <div class="item-product__pin">Артикул: ${product.sku}</div>
+                        <div class="item-product__reviews reviews-item-product">
+                            <div class="reviews-item-product__stars">
+                                <div class="reviews-item-product__star">
+                                    <svg>
+                                        <use
+                                            xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews-item-product__star">
+                                    <svg>
+                                        <use
+                                            xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
+                                    </svg>
+                                </div>
+                                <div class="reviews-item-product__star">
+                                    <svg>
+                                        <use
+                                            xlink:href="{{asset('storage/images/icons/icons.svg#star')}}"></use>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                    <svg>
+                                        <use
+                                            xlink:href="{{asset('storage/images/icons/icons.svg#unfilled')}}"></use>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="reviews-item-product__star reviews-item-product__star_unfilled stroke">
+                                    <svg>
+                                        <use
+                                            xlink:href="{{asset('storage/images/icons/icons.svg#unfilled')}}"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="reviews-item-product__count">159 отзывов</div>
+                        </div>
+                        <a href="catalog/${product.slug}"
+                           class="item-product__title">${product.title}</a>
+
+                        <div class="item-product__bottom">
+                            <div class="item-product__price">1 666р.</div>
+                            <a href="catalog/${product.slug}"
+                               class="item-product__button button button_stroke">В корзину</a>
+                        </div>
+                    </div>
+                </article>
+
+            `
+        }
+        async function setProducts() {
+            console.log('dddd')
+            const response = await fetch('/products/filter', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                body: JSON.stringify({
+                    minPrice: priceMinPriceInput.value,
+                    maxPrice: priceMaxPriceInput.value,
+                    slug: "{{$slug}}"
+                })
+
+            })
+
+            const products = await response.json()
+            const data = products.data
+
+            const wrapper = document.querySelector('.catalog-items')
+            wrapper.innerHTML = ""
+            if (data.length > 0) {
+                for (let index = 0; index < data.length; index++) {
+                    const product = data[index]
+
+                    const productHTML = buildProductHTML(product)
+
+                    const productElement = document.createElement('div')
+                    productElement.className = 'catalog-items__element'
+                    productElement.innerHTML = productHTML
+
+                    wrapper.appendChild(productElement)
+                }
+            }
+
+        }
+
+
+        noUiSlider.create(priceSlider, {
+            start: [{{$minPrice}}, {{$maxPrice}}],
+            connect: true,
+            range: {
+                'min': {{$minPrice}},
+                'max': {{$maxPrice}},
+            }
+        })
+
+        priceSlider.noUiSlider.on('update', function (values, handle) {
+
+            const updatedPrices = updatePrices(values)
+
+            priceInputs[handle].value = updatedPrices[handle];
+
+
+        });
+
+        priceSlider.noUiSlider.on('slide', debounce(setProducts, 300));
+
+        function updatePrices(values) {
+            const minPrice = Number(values[0]).toFixed(0).toString()
+            const maxPrice = Number(values[1]).toFixed(0).toString()
+
+            return [minPrice, maxPrice]
+        }
+
+        priceInputs.forEach(function(input, handle) {
+
+            input.addEventListener('input', function () {
+                priceSlider.noUiSlider.setHandle(handle, this.value);
+            });
+
+        })
+
+        const filterOpenButton = document.querySelector('.sort-actions-catalog__filter')
+        filterOpenButton.addEventListener('click', function(e) {
+            document.querySelector('.side-catalog').classList.add('active')
+            document.body.classList.add('lock')
+        })
+
+        const filterCloseButton = document.querySelector('.top-side-catalog__close')
+        filterCloseButton.addEventListener('click', function(e) {
+            document.querySelector('.side-catalog').classList.remove('active')
+            document.body.classList.remove('lock')
+        })
+    }
+</script>
+
 </body>
 
 </html>
+

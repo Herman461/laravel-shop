@@ -19,6 +19,11 @@ class Category extends Model
         });
     }
 
+    public function scopeFindBySlug($query, $slug)
+    {
+        return $query->where('slug', '=', $slug)->first();
+    }
+
     public function products(): BelongsToMany
     {
         return $this->belongsToMany(Product::class);

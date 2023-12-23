@@ -763,3 +763,33 @@
     background: rgba(76, 133, 214, 0.15);
   }
 }
+
+
+@media (min-width: 567.98px) {
+    .catalog-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+    .catalog-items__element {
+        flex: 0 1 50%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 767.98px) {
+    .catalog-items__element {
+        flex: 0 1 33.333%;
+    }
+}
+
+@media (max-width: 567.98px) {
+    .catalog-items__element {
+        margin-bottom: 20px;
+    }
+    .catalog-items__element:last-child {
+        margin-bottom: 0;
+    }
+}
+

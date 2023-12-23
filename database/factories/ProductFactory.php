@@ -21,7 +21,8 @@ class ProductFactory extends Factory
             'description' => fake()->sentence(20, true),
             'imageUrl' => fake()->imageUrl(350, 350),
             'quantity' => fake()->numberBetween(0, 1000),
-            'sku' => '03232'
+            'price' => fake()->numberBetween(100, 10000),
+            'sku' => fake()->word()
         ];
     }
 }
