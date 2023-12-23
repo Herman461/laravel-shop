@@ -23,10 +23,14 @@ Route::get(
     [HomeController::class, 'index']
 )->name('home.page');
 
-Route::get(
-    '/catalog',
-    [CatalogController::class, 'index']
-)->name('catalog.page');
+Route::controller(CatalogController::class)->group(function() {
+    Route::get(
+        '/catalog/{slug?}',
+        'index'
+    )->name('catalog.page');
+
+});
+
 
 Route::post(
     '/user/store',

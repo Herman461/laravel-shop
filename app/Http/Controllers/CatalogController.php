@@ -2,14 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CatalogController extends Controller
 {
-    public function index() {
-        $products = Product::inRandomOrder()->limit(6)->get();
+    public function index(?string $slug = '') {
 
-        return view('pages.catalog', ['products' => $products]);
+        $category = Category::query()
+            ->where('slug', '=', $slug)
+            ->first();
+
+        $products = $category->products()
+            ->select(['title', 'imageUrl', 'slug'])
+            ->paginate(10);
+
+        return view('pages.catalog', compact('products'));
     }
 }

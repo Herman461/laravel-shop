@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\Attribute;
 use App\Models\AttributeOption;
 use App\Models\Banner;
+use App\Models\Category;
 use App\Models\Product;
 
 use Illuminate\Database\Seeder;
@@ -17,15 +18,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
         Banner::factory(5)->create();
-        Product::factory(50)->create();
+
+        Category::factory(3)->create()
+        ->each(function ($category) {
+            $products = Product::factory(30)->make();
+
+            $category->products()->createMany($products->toArray());
+        });
 
         Attribute::factory(20)
             ->create()
